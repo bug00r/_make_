@@ -13,7 +13,7 @@ export BUILDDIR=$(BUILDROOT)$(PATHSEP)$(CC)
 export BUILDPATH=$(BUILDDIR)$(PATHSEP)
 
 ifeq ($(DEBUG),1)
-	export debug=-Ddebug=1
+	export debug=-Ddebug=1 -ggdb
 	export isdebug=1
 endif
 
@@ -23,12 +23,12 @@ ifeq ($(ANALYSIS),1)
 endif
 
 ifeq ($(DEBUG),2)
-	export debug=-Ddebug=2
+	export debug=-Ddebug=2 -ggdb
 	export isdebug=1
 endif
 
 ifeq ($(DEBUG),3)
-	export debug=-Ddebug=3
+	export debug=-Ddebug=3 -ggdb
 	export isdebug=1
 endif
 
